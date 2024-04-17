@@ -5,11 +5,12 @@ import { Menu } from "./menu/Menu";
 
 
 
-export function Header() {
+
+export function Header(props: {menuIcons: Array<string>, menuItems: Array<string>}) {
   return (
     <StyledHeader>
       <Logo />
-      <Menu />
+      <Menu menuItems = {props.menuItems} menuIcons = {props.menuIcons}/>
     </StyledHeader>
   );
 }

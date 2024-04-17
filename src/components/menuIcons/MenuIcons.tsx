@@ -2,28 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 
-export const MenuIcons = () => {
+
+
+
+export const MenuIcons = (props:{menuIcons:Array<string>}) => {
 
     return (
         <StuledMenuIcons>
-          <li>
-            <a href="">
-              <Icon iconId={"github"}/>
-            </a>
-          </li>
-          <li>
-            <a href="">
-            <Icon iconId={"twitter"}/>
-            </a>
-          </li>
-          <li>
-            <a href="">
-            <Icon iconId={"linkedin"}/>
-            </a>
-          </li>
+          {props.menuIcons.map((item, index)=>(
+           <li key={index}><Icon iconId={`${item}`}/></li> 
+          ))}
         </StuledMenuIcons>
     )
 }
 const StuledMenuIcons = styled.ul`
-    
+   display :flex ;
+   justify-content: center;
+   align-items: center;
 `

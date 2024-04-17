@@ -4,15 +4,14 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { MenuItems } from "../../../components/menuItems/MenuItems";
 import { MenuIcons } from "../../../components/menuIcons/MenuIcons";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
-const icons = [];
 
-export function Menu() {
+
+export function Menu(props: {menuItems:Array<string>, menuIcons: Array<string>}) {
   return (
     <StyledMenu>
       <FlexWrapper justify={"space-around"}>
-        <MenuItems menuItems = {items}/>
-        <MenuIcons/>
+        <MenuItems menuItems = {props.menuItems}/>
+        <MenuIcons menuIcons = {props.menuIcons}/>
       </FlexWrapper>
     </StyledMenu>
   );
