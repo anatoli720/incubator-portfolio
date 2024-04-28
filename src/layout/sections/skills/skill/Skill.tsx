@@ -11,12 +11,14 @@ export const Skill = (props: SkilPropsType) => {
 
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} width={"120"}/>
+            <Icon iconId={props.iconId} width={"120"} height={"120"}/>
         </StyledSkill>
     )
 }
 
 const StyledSkill = styled.div`
-   width: 16% ;
+   max-width: 9% ;
+   width: 100%;
    text-align: center;
+   
 `

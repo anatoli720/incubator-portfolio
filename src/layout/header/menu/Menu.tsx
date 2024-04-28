@@ -9,7 +9,7 @@ import { MenuIcons } from "../../../components/menuIcons/MenuIcons";
 export function Menu(props: {menuItems:Array<string>, menuIcons: Array<string>}) {
   return (
     <StyledMenu>
-      <FlexWrapper justify={"space-around"}>
+      <FlexWrapper justify={"space-between"} >
         <MenuItems menuItems = {props.menuItems}/>
         <MenuIcons menuIcons = {props.menuIcons}/>
       </FlexWrapper>
@@ -18,9 +18,8 @@ export function Menu(props: {menuItems:Array<string>, menuIcons: Array<string>})
 }
 
 const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 10px;
-  }
-`;
+max-width: 790px;
+width: 100%;
 
+
+`
