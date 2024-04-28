@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import { theme } from "../../../styles/Theme";
 
 type MenuItemsPropsType = {
   menuItems: Array<string>;
 };
 
-
-export const MenuItems = (props: MenuItemsPropsType) => {
+export const MenuFooter = (props: MenuItemsPropsType) => {
   return (
     <StyledMenuItems>
       {props.menuItems.map((item, index) => (
@@ -19,14 +18,14 @@ export const MenuItems = (props: MenuItemsPropsType) => {
   );
 };
 export const StyledMenuItems = styled.ul`
-display:flex ;
-justify-content: space-between;
-max-width: 610px;
-width: 100%;
-font-family: DM Sans;
-line-height: 26px;
-  font-size: 20px;
-  font-weight:500;
+  display: flex;
+  justify-content: space-between;
+  max-width: 610px;
+  width: 100%;
+  font-family: "DM Sans";
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 400;
    a {
     vertical-align: middle;
     color: ${theme.colors.fontTextLight};

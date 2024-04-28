@@ -1,7 +1,6 @@
 import React from "react";
 import photo from "../../../assets/images/photo.webp";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 
@@ -9,7 +8,6 @@ export const Main = () => {
   return (
     <Container>
       <StyledMain>
-        
         <StyledMainText>
           <span>Hi 👋,</span>
           <span>My name is</span>
@@ -43,7 +41,6 @@ const StyledMainText = styled.div`
     font-size: 58px;
     font-weight: 700;
     line-height: 70px;
-    color: ${theme.colors.fontTitle};
     background: linear-gradient(90deg, rgb(19, 176, 245), rgb(231, 15, 170));
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent ;

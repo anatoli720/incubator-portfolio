@@ -21,8 +21,8 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Contact menuIcons={icons} />
-      <Footer menuItems={items} /> 
+      <Contact  />
+      <Footer menuItems={items} menuIcons={icons} /> 
     
     </div>
   );

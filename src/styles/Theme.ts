@@ -11,5 +11,6 @@ export const theme = {
   background: {
     bgButton: "#D7FFE0",
     bgLightLine: "#EBEAED",
+    bgShedow: "rgb(0,0,0,0.5)",
   },
 };

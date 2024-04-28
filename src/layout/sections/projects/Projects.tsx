@@ -16,7 +16,7 @@ export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <FlexWrapper direction="column" align="center">
+        <FlexWrapper direction="column" align="center" >
         <SectionTitle>Projects</SectionTitle>
         <SectionText>Things I’ve built so far</SectionText>
         <FlexWrapper wrap="wrap" align="space-between" justify="space-around">

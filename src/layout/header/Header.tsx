@@ -16,6 +16,7 @@ export function Header(props: {
         <Logo />
         <Menu menuItems={props.menuItems} menuIcons={props.menuIcons} />
         </FlexWrapper>
+        
       </Container>
     </StyledHeader>
   );
