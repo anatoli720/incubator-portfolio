@@ -6,7 +6,6 @@ type MenuItemsPropsType = {
   menuItems: Array<string>;
 };
 
-
 export const MenuItems = (props: MenuItemsPropsType) => {
   return (
     <StyledMenuItems>
@@ -19,15 +18,16 @@ export const MenuItems = (props: MenuItemsPropsType) => {
   );
 };
 export const StyledMenuItems = styled.ul`
-display:flex ;
-justify-content: space-between;
-max-width: 610px;
-width: 100%;
-font-family: DM Sans;
-line-height: 26px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 610px;
+  width: 100%;
+  font-family: DM Sans;
+  line-height: 26px;
   font-size: 20px;
-  font-weight:500;
-   a {
+  font-weight: 500;
+  margin: 0px 10px;
+  a {
     vertical-align: middle;
     color: ${theme.colors.fontTextLight};
   }

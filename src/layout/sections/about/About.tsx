@@ -66,9 +66,7 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  background-color: #f3f7f2;
-  min-height: 120vh;
- 
+
   ${FlexWrapper} {
     position: relative;
   }

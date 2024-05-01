@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { MenuItems } from "../../../components/menuItems/MenuItems";
 import { MenuIcons } from "../../../components/menuIcons/MenuIcons";
+import { theme } from "../../../styles/Theme";
 
 
 
@@ -21,5 +22,8 @@ const StyledMenu = styled.nav`
 max-width: 790px;
 width: 100%;
 
+@media ${theme.media.tablet}{
+display: none;
 
+}
 `

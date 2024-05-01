@@ -17,10 +17,10 @@ export const MenuIcons = (props:{menuIcons:Array<string>}) => {
 }
 const StuledMenuIcons = styled.ul`
    display :flex ;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
    
-   gap: 20px;
+   
    max-width: 130px;
    width: 100%;
 

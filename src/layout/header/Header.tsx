@@ -15,15 +15,14 @@ export function Header(props: {
         <FlexWrapper justify={"space-between"} align={"center"}>
         <Logo />
         <Menu menuItems={props.menuItems} menuIcons={props.menuIcons} />
-        </FlexWrapper>
-        
+        </FlexWrapper>       
       </Container>
     </StyledHeader>
   );
 }
 
 const StyledHeader = styled.header`
-  background-color: #f5bdbd;
+
 position: fixed;
 top: 0;
 left: 0;

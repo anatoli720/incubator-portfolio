@@ -26,6 +26,7 @@ export const StyledMenuItems = styled.ul`
   line-height: 26px;
   font-size: 18px;
   font-weight: 400;
+  margin: 0px 10px;
    a {
     vertical-align: middle;
     color: ${theme.colors.fontTextLight};
