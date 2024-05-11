@@ -19,14 +19,21 @@ const StuledMenuIcons = styled.ul`
    display :flex ;
    justify-content: space-between;
    align-items: center;
-   
-   
    max-width: 130px;
    width: 100%;
+   margin-left: 10px;
+
 
    li {
     display: flex;
     justify-content: center;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    :hover {
+      transform: translateY(-5px);
+      transition: 0.5s;
+    }
    }
    
   `

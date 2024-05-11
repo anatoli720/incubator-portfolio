@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MenuItems } from "../../components/menuItems/MenuItems";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/logo/logo";
@@ -16,28 +15,35 @@ export const Footer = (props: {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" align="center">
           <Logo />
           <ContactList>
-            <Tel href="#">+91 12345 09876</Tel>
+            <Tel href="#">+911234509876</Tel>
             <LastMail href="#">info@example.com</LastMail>
             <MenuIcons menuIcons={props.menuIcons} />
           </ContactList>
         </FlexWrapper>
         <LineStyled />
-        <FlexWrapper justify="space-between">
+        <FooterNav>
           <MenuFooter menuItems={props.menuItems}  />
           <FooterText>
             Designed and built by <span>Pavan MG</span> with <span>Love</span> &{" "}
             <span>Coffee</span>
           </FooterText>
-        </FlexWrapper>
+        </FooterNav>
       </Container>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer``;
+const FooterNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  @media ${theme.media.tablet}{
+    flex-wrap: wrap;
+  }
+`
 const FooterText = styled.p`
 span {
   background: linear-gradient(90deg,rgb(19, 176, 245),rgb(231, 15, 170));
@@ -47,14 +53,14 @@ span {
 `;
 
 const ContactList = styled.div`
-  max-width: 50%;
-  width: 100%;
+width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  flex-wrap: wrap;
   align-items: center;
-`;
+  margin-left: 10px;
+  `
 const LineStyled = styled.div`
-  width: 100%;
   height: 2px;
   background-color: ${theme.colors.fontTextLight};
   margin: 40px 0px;
@@ -65,12 +71,15 @@ const LastMail = styled.a`
   font-weight: 400;
   line-height: 26px;
   color: ${theme.colors.fontTitle};
+  margin-left:10px;
 `;
 
 const Tel = styled.a`
+display: inline-block;
   font-family: DM Sans;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   color: ${theme.colors.fontTitle};
+  text-align: center;
 `;

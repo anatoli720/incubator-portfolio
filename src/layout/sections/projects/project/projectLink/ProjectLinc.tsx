@@ -11,7 +11,7 @@ type ProjectLinkTextPropsType = {
 export const ProjectLink = (props: ProjectLinkTextPropsType) => {
   return (
     <ProjectLinkStyled>
-      <FlexWrapper>
+      <FlexWrapper >
         <Icon iconId={props.iconId} width="20" height="20" viewBox="0 0 20 20"/>
         <Text>{props.text}</Text>
       </FlexWrapper>
@@ -20,6 +20,6 @@ export const ProjectLink = (props: ProjectLinkTextPropsType) => {
 };
 
 const ProjectLinkStyled = styled.a`
-margin: 0px 30px;
+cursor: pointer;
 `;
 const Text = styled.span``;

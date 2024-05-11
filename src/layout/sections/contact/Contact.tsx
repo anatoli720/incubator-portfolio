@@ -4,7 +4,6 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 
-
 export const Contact = () => {
   return (
     <StyledContact>
@@ -12,7 +11,7 @@ export const Contact = () => {
         <FlexWrapper align="center" direction="column">
           <SectionTitle>For any questions please mail me:</SectionTitle>
           <FirstMail href="#">hi@pavanmg.in</FirstMail>
-        </FlexWrapper>  
+        </FlexWrapper>
       </Container>
     </StyledContact>
   );

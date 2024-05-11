@@ -1,5 +1,6 @@
 import React from "react";
 import photo from "../../../assets/images/photo.webp";
+import photo2x from "../../../assets/images/photo@2x.webp";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
@@ -14,7 +15,7 @@ export const Main = () => {
           <h2>Pavan MG</h2>
           <h1>I build things for web</h1>
         </StyledMainText>
-        <Photo src={photo} alt="photo" />
+        <Photo src={photo} srcSet={`${photo2x} 2x`} alt="photo"/>
        
       </StyledMain>
       </Container>
@@ -26,6 +27,14 @@ const StyledMain = styled.main`
   align-items: center;
   min-height: 100vh;
   width: 100%;
+ margin-top:60px;
+  @media ${theme.media.tablet}{
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+   margin-top: 60px; 
+  }
+ 
 `;
 const StyledMainText = styled.div`
   display: flex;

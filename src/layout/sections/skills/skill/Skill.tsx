@@ -5,20 +5,22 @@ import styled from 'styled-components';
 
 type SkilPropsType = {
     iconId: string
+    width: string
+    height: string
+    viewBox: string
 }
 
 export const Skill = (props: SkilPropsType) => {
 
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} width={"120"} height={"120"}/>
+            <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
         </StyledSkill>
     )
 }
 
 const StyledSkill = styled.div`
-   max-width: 9% ;
-   width: 100%;
-   text-align: center;
-   
+margin-bottom: 81px;
+
+  
 `

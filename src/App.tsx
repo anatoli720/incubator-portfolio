@@ -23,7 +23,7 @@ function App() {
       <Projects />
       <Contact  />
       <Footer menuItems={items} menuIcons={icons} /> 
-    
+     
     </div>
   );
 }

@@ -19,7 +19,7 @@ export const Projects = () => {
         <FlexWrapper direction="column" align="center" >
         <SectionTitle>Projects</SectionTitle>
         <SectionText>Things I’ve built so far</SectionText>
-        <FlexWrapper wrap="wrap" align="space-between" justify="space-around">
+        <FlexWrapper wrap="wrap" align="space-between" justify="space-around" gap="10px">
           <Project textTech={"HTML , JavaScript, SASS, React"} src={img1} />
           <Project textTech={"HTML , JavaScript, SASS, React"} src={img2} />
           <Project textTech={"HTML , JavaScript, SASS, React"} src={img3} />
