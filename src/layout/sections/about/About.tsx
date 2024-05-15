@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Icon } from "../../../components/icon/Icon";
+
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import setka from "../../../assets/images/drawing.svg";
 import { AboutElement } from "./aboutElement/AboutElement";
@@ -8,6 +8,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { AboutElementEducat } from "./aboutElement/aboutElementEducat";
+import { font } from "../../../styles/Common";
 
 export const About = () => {
   return (
@@ -76,9 +77,9 @@ const StyledAbout = styled.section`
 
  
   p {
+    ${font({weight:400, Fmax:18,Fmin:14})}
     color: ${theme.colors.fontTextLight};
-    font-size: 18px;
-    font-weight: 400;
+ 
     line-height: 26px;
     letter-spacing: 0px;
     margin-bottom: 38px;

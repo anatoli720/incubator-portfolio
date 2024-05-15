@@ -51,7 +51,7 @@ const StyledProject = styled.div`
       transition: 0.3s;
     }
     img {
-      opacity: 0.7;
+      filter: hue-rotate(90deg);
       transition: 0.3s;
     }
   }

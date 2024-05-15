@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { theme } from "../../../../styles/Theme";
 import office from "../../../../assets/images/office.svg";
-import calendar from "../../../../assets/images/calendar.svg"
+import calendar from "../../../../assets/images/calendar.svg";
+import { font } from "../../../../styles/Common";
 
 type AboutElementPropsType = {
   position: string;
@@ -32,8 +33,7 @@ export const AboutElementEducat = (props: AboutElementPropsType) => {
 
 const StyledAboutElementEducat = styled.div``;
 const Position = styled.div`
-  font-size: 20px;
-  font-weight: 400;
+${font({weight: 400, Fmax: 20,Fmin: 14})}
   line-height: 28px;
   letter-spacing: 1px;
   color: ${theme.colors.fontTextLight};

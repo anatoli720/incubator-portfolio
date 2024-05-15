@@ -6,14 +6,15 @@ import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { S } from "./Header_Styles";
 
 
-export function Header(props: {
+export const Header = (props: {
   menuIcons: Array<string>;
   menuItems: Array<string>;
-}) {
+}) => {
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
         <Logo />
@@ -21,18 +22,8 @@ export function Header(props: {
         <MobileMenu  menuItems={props.menuItems}/>
         </FlexWrapper>       
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 }
 
-const StyledHeader = styled.header`
-background-color: white;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 9999;
-${theme.media.tablet}{
-  display: none;
-}
-`;
+

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 type MenuItemsPropsType = {
   menuItems: Array<string>;
@@ -22,12 +23,12 @@ export const StyledMenuItems = styled.ul`
   justify-content: space-between;
   max-width: 610px;
   width: 100%;
-  font-family: "DM Sans";
-  line-height: 26px;
-  font-size: 18px;
-  font-weight: 400;
   margin: 0px 10px;
+  @media ${theme.media.tablet}{
+    margin: 0 auto;
+  }
    a {
+    ${font({Fmax:18, Fmin: 14, family: "DM Sans", weight: 400})}
     vertical-align: middle;
     color: ${theme.colors.fontTextLight};
     &::before {
@@ -56,5 +57,6 @@ export const StyledMenuItems = styled.ul`
     transition: 2s;
     }
     transition: 2s;
+
   }
 `;

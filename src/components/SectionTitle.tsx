@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-
-font-size: 42px;
-font-weight: 700;
-line-height: 52px;
+${font({ Fmax: 42, Fmin: 25})}
 color: ${theme.colors.fontTitle};
 margin-bottom  :49px ;
-
+@media ${theme.media.mobile}{
+    margin-bottom: 0px;
+}
 `

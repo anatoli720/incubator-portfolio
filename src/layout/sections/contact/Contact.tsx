@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
+import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
 
 export const Contact = () => {
   return (
@@ -22,10 +24,10 @@ const FirstMail = styled.a`
   background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: DM Sans;
-  font-size: 58px;
-  font-weight: 700;
-  line-height: 70px;
+  ${font({Fmax:58, Fmin:30, family:"DM Sans"})}
   letter-spacing: -1px;
   margin-bottom: 200px;
+ @media ${theme.media.mobile}{
+  margin-bottom: 20px;
+ }
 `;

@@ -101,11 +101,17 @@ const StyledSkills = styled.section`
   ${Container} {
     ${FlexWrapper} {
       ${FlexWrapper} {
-        @media screen and (max-width:1202px) and (min-width: 992px) {
+        @media screen and (max-width: 1202px) and (min-width: 992px) {
           column-gap: 150px;
         }
-      }
+        @media ${theme.media.tablet} {
+          margin-bottom: 0px;
+          gap: 40px;
+        }
       }
     }
- 
+  }
+  @media ${theme.media.mobile}{
+    margin-bottom: 30px;
+  }
 `;

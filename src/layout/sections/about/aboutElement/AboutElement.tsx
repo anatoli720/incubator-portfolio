@@ -5,6 +5,7 @@ import { theme } from "../../../../styles/Theme";
 import office from "../../../../assets/images/office.svg";
 import location from "../../../../assets/images/location.svg";
 import calendar from "../../../../assets/images/calendar.svg"
+import { font } from "../../../../styles/Common";
 
 type AboutElementPropsType = {
   position: string;
@@ -33,9 +34,7 @@ export const AboutElement = (props: AboutElementPropsType) => {
 
 const StyledAboutElement = styled.div``;
 const Position = styled.div`
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
+${font({weight: 400, Fmax: 20,Fmin: 14})}
   letter-spacing: 1px;
   color: ${theme.colors.fontTextLight};
 `;
@@ -84,6 +83,9 @@ const Location = styled.div`
     background-image: url(${location});
     margin-right: 4px;
     background-repeat: no-repeat;
+  }
+  @media ${theme.media.mobile}{
+    display: none;
   }
 `;
 const Calendar = styled.div`

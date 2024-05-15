@@ -36,12 +36,14 @@ export const Footer = (props: {
   );
 };
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+`;
 const FooterNav = styled.nav`
   display: flex;
   justify-content: space-between;
   @media ${theme.media.tablet}{
     flex-wrap: wrap;
+   justify-content: center;
   }
 `
 const FooterText = styled.p`
@@ -64,6 +66,9 @@ const LineStyled = styled.div`
   height: 2px;
   background-color: ${theme.colors.fontTextLight};
   margin: 40px 0px;
+  @media ${theme.media.mobile}{
+    margin: 10px 0px;
+  }
 `;
 const LastMail = styled.a`
   font-family: DM Sans;
