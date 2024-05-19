@@ -1,40 +1,13 @@
-import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { theme } from "../../../../styles/Theme";
 import office from "../../../../assets/images/office.svg";
 import calendar from "../../../../assets/images/calendar.svg";
 import { font } from "../../../../styles/Common";
-
-type AboutElementPropsType = {
-  position: string;
-  textButton: string;
-  office: string;
-  location?: string;
-  calendar: string;
-};
-
-export const AboutElementEducat = (props: AboutElementPropsType) => {
-  return (
-    <StyledAboutElementEducat>
-      <FlexWrapper justify="space-between">
-        <Position>{props.position}</Position>
-        <Button>{props.textButton}</Button>
-      </FlexWrapper>
-      <FlexWrapper justify="space-between">
-        <Office>{props.office}</Office>
-        <Location>{props.location}</Location>
-        <Calendar>{props.calendar}</Calendar>
-      </FlexWrapper>
-      <Line></Line>
-    </StyledAboutElementEducat>
-  );
-};
-
-const StyledAboutElementEducat = styled.div``;
+import location from "../../../../assets/images/location.svg";
+//aboutEducation
+const StyledAboutEducation = styled.div``;
 const Position = styled.div`
 ${font({weight: 400, Fmax: 20,Fmin: 14})}
-  line-height: 28px;
   letter-spacing: 1px;
   color: ${theme.colors.fontTextLight};
 `;
@@ -69,14 +42,6 @@ const Office = styled.div`
     
   }
 `;
-const Location = styled.div`
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 1px;
-  color: ${theme.colors.fontMicro};
-  
-`;
 const Calendar = styled.div`
   font-size: 12px;
   font-weight: 500;
@@ -92,7 +57,6 @@ const Calendar = styled.div`
   background-image: url(${calendar});
   background-repeat: no-repeat;
 }
-
 `;
 const Line = styled.div`
   width: 100%;
@@ -100,3 +64,36 @@ const Line = styled.div`
   background-color: ${theme.background.bgLightLine};
   margin: 20px 0px 30px 0px;
 `;
+
+//aboutWork
+const StyledAboutWork = styled.div``;
+const Location = styled.div`
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: ${theme.colors.fontMicro};
+  ::before {
+    content:"";
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background-image: url(${location});
+    margin-right: 4px;
+    background-repeat: no-repeat;
+  }
+  @media ${theme.media.mobile}{
+    display: none;
+  }
+`;
+
+export const S = {
+    StyledAboutEducation,
+    Position,
+    Button,
+    Office,
+    Calendar,
+    Line,
+    StyledAboutWork,
+    Location
+}

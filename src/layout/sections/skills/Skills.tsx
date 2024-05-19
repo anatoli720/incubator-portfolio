@@ -1,117 +1,106 @@
 import React from "react";
-import styled from "styled-components";
+
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Skill } from "./skill/Skill";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { SectionText } from "../../../components/SectionText";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Skils_Styled";
 
-export const Skills = () => {
+
+const skillData = [
+  {
+    iconId:"html",
+  width:"110px",
+  height:"110px",
+  viewBox:"0 0 115 115"
+},
+  {
+    iconId:"css",
+  width:"110px",
+  height:"110px",
+  viewBox:"0 0 115 115"
+},
+{
+  iconId:"js",
+width:"110px",
+height:"110px",
+viewBox:"0 0 115 115"
+},
+{
+  iconId:"react",
+width:"110px",
+height:"110px",
+viewBox:"0 0 113 101"
+},
+{
+  iconId:"redux",
+width:"110px",
+height:"110px",
+viewBox:"0 0 105 100"
+},
+{
+  iconId:"bootstrap",
+width:"110px",
+height:"110px",
+viewBox:"0 0 88 87"
+},
+{
+  iconId:"tailwind",
+width:"110px",
+height:"110px",
+viewBox:"0 0 131 131"
+},
+{
+  iconId:"sass",
+width:"110px",
+height:"110px",
+viewBox:"0 0 117 87"
+},
+{
+  iconId:"gitIcon",
+width:"110px",
+height:"110px",
+viewBox:"0 0 105 105"
+},
+{
+  iconId:"greensock",
+width:"110px",
+height:"110px",
+viewBox:"0 0 120 120"
+},
+{
+  iconId:"vscode",
+width:"110px",
+height:"110px",
+viewBox:"0 0 112 112"
+},
+{
+  iconId:"githubBig",
+width:"110px",
+height:"110px",
+viewBox:"0 0 88 88"
+},
+]
+
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.StyledSkills>
       <Container>
         <FlexWrapper justify="center" align="center" direction="column">
           <SectionTitle>My Tech Stack</SectionTitle>
           <SectionText>
             Technologies I’ve been working with recently
           </SectionText>
-          <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"90px"}>
-            <Skill
-              iconId={"html"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 120 120 "}
-            />
-            <Skill
-              iconId={"css"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 120 119"}
-            />
-            <Skill
-              iconId={"js"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 120 120"}
-            />
-            <Skill
-              iconId={"react"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 113 101"}
-            />
-            <Skill
-              iconId={"redux"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 105 100"}
-            />
-            <Skill
-              iconId={"bootstrap"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0  0 88 87"}
-            />
-            <Skill
-              iconId={"tailwind"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 131 131"}
-            />
-            <Skill
-              iconId={"sass"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 117 87"}
-            />
-            <Skill
-              iconId={"gitIcon"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 105 105"}
-            />
-            <Skill
-              iconId={"greensock"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 120 120"}
-            />
-            <Skill
-              iconId={"vscode"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 112 112"}
-            />
-            <Skill
-              iconId={"githubBig"}
-              width={"120px"}
-              height={"120px"}
-              viewBox={"0 0 90 90"}
-            />
-          </FlexWrapper>
+          <S.GreedContainer>
+            {skillData.map((s, index)=>
+              <Skill key={index} iconId={s.iconId} width={s.width} height={s.height} viewBox={s.viewBox}/>
+            )}
+          </S.GreedContainer>
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
-  margin-bottom: 210px;
-  ${Container} {
-    ${FlexWrapper} {
-      ${FlexWrapper} {
-        @media screen and (max-width: 1202px) and (min-width: 992px) {
-          column-gap: 150px;
-        }
-        @media ${theme.media.tablet} {
-          margin-bottom: 0px;
-          gap: 40px;
-        }
-      }
-    }
-  }
-  @media ${theme.media.mobile}{
-    margin-bottom: 30px;
-  }
-`;
+

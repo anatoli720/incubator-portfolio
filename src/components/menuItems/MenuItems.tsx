@@ -6,7 +6,9 @@ type MenuItemsPropsType = {
   menuItems: Array<string>;
 };
 
-export const MenuItems = (props: MenuItemsPropsType) => {
+export const MenuItems: React.FC<MenuItemsPropsType> = (
+  props: MenuItemsPropsType
+) => {
   return (
     <StyledMenuItems>
       {props.menuItems.map((item, index) => (
@@ -30,7 +32,7 @@ export const StyledMenuItems = styled.ul`
   a {
     vertical-align: middle;
     color: ${theme.colors.fontTextLight};
-  
+
     &::before {
       display: block;
       content: "";
@@ -38,27 +40,22 @@ export const StyledMenuItems = styled.ul`
       width: 0%;
       height: 1px;
       transition: 1s;
-     margin-left: 50%;
+      margin-left: 50%;
     }
     &:hover {
       &::before {
-      content: "";
-      display: block;
-      transform: translateY(25px);
-      width: 100%;
-      height: 1px;
-      background-color: #eb55cb;
-      margin-left: 0px;
-      transition: 1s;
-      
-      
-    }
-    color:#eb55cb ;
-    transition: 2s;
+        content: "";
+        display: block;
+        transform: translateY(25px);
+        width: 100%;
+        height: 1px;
+        background-color: #eb55cb;
+        margin-left: 0px;
+        transition: 1s;
+      }
+      color: #eb55cb;
+      transition: 2s;
     }
     transition: 2s;
   }
-  
-  
-  
 `;

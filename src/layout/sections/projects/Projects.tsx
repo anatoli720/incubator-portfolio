@@ -11,32 +11,53 @@ import img4 from "../../../assets/images/project4.webp";
 import img5 from "../../../assets/images/project5.webp";
 import img6 from "../../../assets/images/project6.webp";
 import { Container } from "../../../components/Container";
+import { S } from "./Project_Styled";
 
-export const Projects = () => {
+const projectData = [
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img1,
+  },
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img2,
+  },
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img3,
+  },
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img4,
+  },
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img5,
+  },
+  {
+    textTech: "HTML , JavaScript, SASS, React",
+    src: img6,
+  },
+];
+export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <S.StyledProjects>
       <Container>
-        <FlexWrapper direction="column" align="center" >
-        <SectionTitle>Projects</SectionTitle>
-        <SectionText>Things I’ve built so far</SectionText>
-        <FlexWrapper wrap="wrap" align="space-between" justify="space-around" gap="10px">
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img1} />
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img2} />
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img3} />
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img4} />
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img5} />
-          <Project textTech={"HTML , JavaScript, SASS, React"} src={img6} />
+        <FlexWrapper direction="column" align="center">
+          <SectionTitle>Projects</SectionTitle>
+          <SectionText>Things I’ve built so far</SectionText>
+          <FlexWrapper
+            wrap="wrap"
+            align="space-between"
+            justify="space-around"
+            gap="10px"
+          >
+            {projectData.map((p, index) => (
+              <Project key={index} textTech={p.textTech} src={p.src} />
+            ))}
+          </FlexWrapper>
         </FlexWrapper>
-        </FlexWrapper>
-        
       </Container>
-    </StyledProjects>
+    </S.StyledProjects>
   );
 };
-
-const StyledProjects = styled.section`
-  background-color: #f3dd7a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;

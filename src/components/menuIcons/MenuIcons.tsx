@@ -5,7 +5,7 @@ import { Icon } from '../icon/Icon';
 
 
 
-export const MenuIcons = (props:{menuIcons:Array<string>}) => {
+export const MenuIcons:React.FC<{menuIcons:Array<string>}> = (props:{menuIcons:Array<string>}) => {
 
     return (
         <StuledMenuIcons>

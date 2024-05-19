@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Logo() {
+export const Logo:React.FC = () => {
   return (
     <a href="">
       <svg width="110" height="48" viewBox="0 0 185 48" fill="none" xmlns="http://www.w3.org/2000/svg">
